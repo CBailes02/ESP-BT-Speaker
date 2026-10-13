@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 | Supported Targets | ESP32 | ESP32-S31 |
 | ----------------- | ----- | --------- |
 
@@ -103,3 +104,7 @@ Also, the sound will be heard if a loudspeaker is connected and possible externa
 ## Troubleshooting
 * At the current stage, the supported audio codecs are SBC and AAC. If the internal A2DP codec is used, only SBC is supported; if the external A2DP codec is used, both SBC and AAC are supported, which can be achieved by registering Stream Endpoints (SEPs). Additionally, both internal and external codec options can be reconfigured via API calls.
 * As a usage limitation, A2DP sink can support at most one connection with remote A2DP source devices. Also, A2DP sink cannot be used together with A2DP source at the same time, but can be used with other profiles such as SPP and HFP.
+=======
+# ESP-BT-Speaker
+BT Sink with i2s output
+>>>>>>> 50b88210896ef7d31350e73cba80549b0a92f3e9
