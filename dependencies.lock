@@ -29,6 +29,36 @@ dependencies:
       path: ../common/bt_app_core_utils
       type: local
     version: '*'
+  espressif/dl_fft:
+    component_hash: 965be7152132b365061abf5fc5fc7b85e525f73b94a204cdda61cfe9572c0d77
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.0'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 0.8.0
+  espressif/esp-dsp:
+    component_hash: ed9ac175b14e0414399a2b33c525579414b5bad19a2a67b12ea212def96f9a98
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=4.2'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 1.8.2
+  espressif/led_strip:
+    component_hash: 097f698887601de00bed7ff58f91b9e074fa1ae1bcf53582034b01191cc88e9f
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.2'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 3.1.0~1
   idf:
     source:
       type: idf
@@ -39,6 +69,9 @@ direct_dependencies:
 - a2dp_sink_int_codec_utils
 - bredr_app_common_utils
 - bt_app_core_utils
-manifest_hash: 5a9748832cc9c69c2bf92be8541726ea8e54d5451cee345590f90f5d3782c16d
+- espressif/dl_fft
+- espressif/esp-dsp
+- espressif/led_strip
+manifest_hash: e4387e8b49a9c458ce593473d1fdfeabf9d3e8590a8632d14cd296de1301ef41
 target: esp32
 version: 3.0.0

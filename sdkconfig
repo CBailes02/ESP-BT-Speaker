@@ -1495,6 +1495,29 @@ CONFIG_I2S_ENABLE_DEBUG_LOG=y
 # end of ESP-Driver:I2S Configurations
 
 #
+# ESP-Driver:RMT Configurations
+#
+# default:
+CONFIG_RMT_ENCODER_FUNC_IN_IRAM=y
+# default:
+CONFIG_RMT_TX_ISR_HANDLER_IN_IRAM=y
+# default:
+CONFIG_RMT_RX_ISR_HANDLER_IN_IRAM=y
+# default:
+# CONFIG_RMT_RECV_FUNC_IN_IRAM is not set
+# default:
+# CONFIG_RMT_TX_ISR_CACHE_SAFE is not set
+# default:
+# CONFIG_RMT_RX_ISR_CACHE_SAFE is not set
+# default:
+CONFIG_RMT_OBJ_CACHE_SAFE=y
+# default:
+# CONFIG_RMT_ENABLE_DEBUG_LOG is not set
+# default:
+# CONFIG_RMT_ISR_IRAM_SAFE is not set
+# end of ESP-Driver:RMT Configurations
+
+#
 # ESP-Driver:SPI Configurations
 #
 # default:
@@ -2624,7 +2647,7 @@ CONFIG_LWIP_SO_REUSE=y
 # default:
 CONFIG_LWIP_SO_REUSE_RXTOALL=y
 # default:
-# CONFIG_LWIP_SO_RCVBUF is not set
+CONFIG_LWIP_SO_RCVBUF=y
 # default:
 # CONFIG_LWIP_NETBUF_RECVINFO is not set
 # default:
@@ -2802,7 +2825,31 @@ CONFIG_LWIP_IPV6_ND6_NUM_DESTINATIONS=10
 # default:
 # CONFIG_LWIP_IPV6_ND6_ROUTE_INFO_OPTION_SUPPORT is not set
 # default:
-# CONFIG_LWIP_PPP_SUPPORT is not set
+CONFIG_LWIP_PPP_SUPPORT=y
+# default:
+CONFIG_LWIP_PPP_ENABLE_IPV4=y
+# default:
+CONFIG_LWIP_PPP_ENABLE_IPV6=y
+# default:
+# CONFIG_LWIP_PPP_NOTIFY_PHASE_SUPPORT is not set
+# default:
+# CONFIG_LWIP_PPP_PAP_SUPPORT is not set
+# default:
+# CONFIG_LWIP_PPP_CHAP_SUPPORT is not set
+# default:
+# CONFIG_LWIP_PPP_MSCHAP_SUPPORT is not set
+# default:
+# CONFIG_LWIP_PPP_MPPE_SUPPORT is not set
+# default:
+# CONFIG_LWIP_PPP_SERVER_SUPPORT is not set
+# default:
+CONFIG_LWIP_PPP_VJ_HEADER_COMPRESSION=y
+# default:
+# CONFIG_LWIP_ENABLE_LCP_ECHO is not set
+# default:
+# CONFIG_LWIP_PPP_DEBUG_ON is not set
+# default:
+# CONFIG_LWIP_USE_EXTERNAL_MBEDTLS is not set
 # default:
 # CONFIG_LWIP_SLIP_SUPPORT is not set
 
@@ -3436,6 +3483,35 @@ CONFIG_VFS_SEMIHOSTFS_MAX_MOUNT_POINTS=1
 # default:
 CONFIG_VFS_INITIALIZE_DEV_NULL=y
 # end of Virtual file system
+
+#
+# DSP Library
+#
+# default:
+CONFIG_DSP_OPTIMIZATIONS_SUPPORTED=y
+# default:
+# CONFIG_DSP_ANSI is not set
+# default:
+CONFIG_DSP_OPTIMIZED=y
+# default:
+CONFIG_DSP_OPTIMIZATION=1
+# default:
+# CONFIG_DSP_MAX_FFT_SIZE_512 is not set
+# default:
+# CONFIG_DSP_MAX_FFT_SIZE_1024 is not set
+# default:
+# CONFIG_DSP_MAX_FFT_SIZE_2048 is not set
+# default:
+CONFIG_DSP_MAX_FFT_SIZE_4096=y
+# default:
+# CONFIG_DSP_MAX_FFT_SIZE_8192 is not set
+# default:
+# CONFIG_DSP_MAX_FFT_SIZE_16384 is not set
+# default:
+# CONFIG_DSP_MAX_FFT_SIZE_32768 is not set
+# default:
+CONFIG_DSP_MAX_FFT_SIZE=4096
+# end of DSP Library
 # end of Component config
 
 # default:
@@ -3852,7 +3928,13 @@ CONFIG_TCPIP_TASK_AFFINITY_NO_AFFINITY=y
 # CONFIG_TCPIP_TASK_AFFINITY_CPU0 is not set
 # CONFIG_TCPIP_TASK_AFFINITY_CPU1 is not set
 CONFIG_TCPIP_TASK_AFFINITY=0x7FFFFFFF
-# CONFIG_PPP_SUPPORT is not set
+CONFIG_PPP_SUPPORT=y
+# CONFIG_PPP_NOTIFY_PHASE_SUPPORT is not set
+# CONFIG_PPP_PAP_SUPPORT is not set
+# CONFIG_PPP_CHAP_SUPPORT is not set
+# CONFIG_PPP_MSCHAP_SUPPORT is not set
+# CONFIG_PPP_MPPE_SUPPORT is not set
+# CONFIG_PPP_DEBUG_ON is not set
 # CONFIG_MBEDTLS_ATCA_HW_ECDSA_SIGN is not set
 # CONFIG_MBEDTLS_ATCA_HW_ECDSA_VERIFY is not set
 CONFIG_ESP32_PTHREAD_TASK_PRIO_DEFAULT=5
